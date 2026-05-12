@@ -5,6 +5,7 @@ import SlideText from "./SlideText";
 import heroImag from "../../assets/shamim-removebg-preview.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 const socialLinks = [
   {
     icon: <FaGithub size={20} />,
@@ -33,6 +34,7 @@ const Hero = () => {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <h4 className="uppercase bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-medium mb-5">
               Well Come To My Portfolio
@@ -56,21 +58,21 @@ const Hero = () => {
               user experiences.
             </p>
             <div className="flex items-center flex-wrap gap-4 pt-4">
-              <a
+              <Link
                 href="/resume.pdf"
                 download
                 className="flex items-center gap-2 px-5 py-3 rounded-full bg-linear-to-r from-cyan-400 to-blue-500 text-white font-medium hover:scale-105 transition-transform duration-300"
               >
                 Download Resume
                 <Download size={18} />
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="#projects"
                 className="px-5 py-3 rounded-full border border-cyan-400 text-cyan-400 font-medium hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 View My Works
-              </a>
+              </Link>
             </div>
             <div className="flex items-center gap-3 pt-5">
               {socialLinks.map((item, index) => (
@@ -79,8 +81,8 @@ const Hero = () => {
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-white/10 border border-white/20 text-white 
-                 hover:bg-linear-to-r hover:from-cyan-400 hover:to-blue-500 
+                  className="p-3 rounded-full bg-white/10 border border-white/20 text-white
+                 hover:bg-linear-to-r hover:from-cyan-400 hover:to-blue-500
                  hover:scale-100 hover:-translate-x-1 transition-all duration-300"
                 >
                   {item.icon}
@@ -93,6 +95,7 @@ const Hero = () => {
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <div className="rounded-full p-[4px] bg-linear-to-r from-cyan-400 to-blue-500">
               <div className="rounded-full overflow-hidden">
@@ -101,7 +104,7 @@ const Hero = () => {
                   width={400}
                   height={400}
                   alt="heroImg"
-                  className="w-[280px] h-[280px] md:w-[400px] md:h-[400px] object-cover rounded-full transition-transform duration-500 hover:scale-105"
+                  className=" w-[280px] h-[280px] md:w-[400px] md:h-[400px] object-cover rounded-full transition-transform duration-500 hover:scale-105"
                 />
               </div>
             </div>
