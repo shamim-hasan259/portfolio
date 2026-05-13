@@ -1,6 +1,7 @@
 import { Merienda } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
+import Footer from "@/components/Footer";
 const marida = Merienda({
   subsets: ["latin"],
 });
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
           <Navbar />
         </div>
         <main className="pt-16 md:pt-10">{children}</main>
+        <Footer />
       </body>
     </html>
   );

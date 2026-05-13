@@ -184,7 +184,7 @@ const SkillsSection = () => {
               className={`px-5 py-2 rounded-full border text-sm sm:text-base transition-all duration-300
               ${
                 activeCategory === category
-                  ? "bg-linear-to-r from-cyan-400/90 to-blue-500/90 "
+                  ? "bg-linear-to-r from-cyan-400 to-blue-500"
                   : "bg-white/5 border-white/10 text-gray-300 hover:border-cyan-400 hover:text-cyan-400"
               }`}
             >

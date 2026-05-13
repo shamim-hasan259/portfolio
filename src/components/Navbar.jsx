@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const navItems = [
   { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
+  { name: "About Me", href: "#about" },
   { name: "Education", href: "#education" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
@@ -31,7 +31,7 @@ export const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out py-5 border-b border-white/5 ${
         isScrolled
-          ? "py-3 bg-[#05050a]/90 backdrop-blur-xl shadow-2xl"
+          ? "py-3 bg-[#05050a]/80 backdrop-blur-xl shadow-2xl"
           : " bg-transparent"
       }`}
     >
@@ -51,7 +51,7 @@ export const Navbar = () => {
               <Link
                 key={key}
                 href={item.href}
-                className={` font-bold transition-all duration-300 relative group py-2 tracking-widest ${
+                className={`font-medium text-sm transition-all duration-300 relative group py-2 tracking-widest ${
                   isActive
                     ? "text-cyan-400"
                     : "text-gray-300 hover:text-cyan-400"
@@ -59,7 +59,7 @@ export const Navbar = () => {
               >
                 {item.name}
                 <span
-                  className={`absolute bottom-1 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-600 transition-all duration-300 ${
+                  className={`absolute bottom-1 left-0 h-0.5 bg-linear-to-r from-cyan-400 to-blue-600 transition-all duration-300 ${
                     isActive ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 ></span>
@@ -80,7 +80,7 @@ export const Navbar = () => {
         </button>
 
         <div
-          className={`fixed inset-0 bg-[#05050a] flex flex-col items-center justify-center transition-all duration-500 ease-in-out md:hidden z-[55] ${
+          className={`fixed h-96 inset-0 bg-[#05050a]/80 flex flex-col items-center justify-center transition-all duration-500 ease-in-out md:hidden z-[55] ${
             isMenuOpen
               ? "translate-y-0 opacity-100"
               : "-translate-y-full opacity-0"
@@ -110,3 +110,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+export default Navbar;
